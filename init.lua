@@ -37,7 +37,7 @@ local creative_mode = minetest.settings:get_bool("creative_mode")
 
 -- Boilerplate to support localized strings if intllib mod is installed.
 local S
-if minetest.get_modpath("intllib") then
+if minetest.global_exists("intllib") then
 	S = intllib.Getter()
 else
 	S = function(s) return s end
